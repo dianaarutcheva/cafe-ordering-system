@@ -12,3 +12,14 @@ export interface MenuItem {
   discountPercent?: number;
   availableFrom?: Date;
 }
+
+
+
+export interface ComboDeal {
+  id: number;
+  name: string;
+  items: MenuItem[];
+  price: number;
+}
+
+export type OrderLine = MenuItem | ComboDeal;
