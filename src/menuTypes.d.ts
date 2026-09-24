@@ -1,5 +1,6 @@
 export type Course = "starter" | "main" | "dessert";
 
+
 export interface MenuItem {
   id: number;
   name: string;
@@ -23,3 +24,6 @@ export interface ComboDeal {
 }
 
 export type OrderLine = MenuItem | ComboDeal;
+
+
+export type KitchenTicket = Readonly<Pick<MenuItem, "name" | "course">>;
