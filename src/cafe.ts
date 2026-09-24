@@ -5,7 +5,10 @@
 // TS: These three objects share a structure - declare an interface (call it
 //     MenuItem) that describes it, and annotate each declaration with it.
 //     Note that 'nutrition' is a nested object, so it needs a nested type.
-const soup = {
+import { MenuItem } from "./menuTypes";
+
+
+const soup: MenuItem = {
   id: 1,
   name: "Roast Tomato Soup",
   course: "starter",
@@ -14,9 +17,10 @@ const soup = {
     calories: 180,
     allergens: ["celery"],
   },
+  discountPercent: 10,
 };
 
-const risotto = {
+const risotto: MenuItem = {
   id: 2,
   name: "Mushroom Risotto",
   // TS: 'course' should only ever be one of three values. Declare a *literal
@@ -29,12 +33,13 @@ const risotto = {
     calories: 620,
     allergens: ["milk"],
   },
+  availableFrom: new Date("2026-09-01"),
 };
 
-const brownie = {
+const brownie: MenuItem = {
   id: 3,
   name: "Chocolate Brownie",
-  course: "desert",
+  course: "dessert",
   price: 6.0,
   nutrition: {
     calories: 450,
